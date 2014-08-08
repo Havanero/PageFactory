@@ -28,11 +28,11 @@ public class EtsyTest {
     public void TestMe() {
 
         logger.setLevel(Level.OFF);
-        //driver = new HtmlUnitDriver();
+        driver = new HtmlUnitDriver();
 
-        FirefoxBinary binary = new FirefoxBinary(new File("C:\\Users\\Caleb.Carvalho\\AppData\\Local\\Mozilla Firefox\\firefox.exe\\"));
-        FirefoxProfile profile = new FirefoxProfile();
-        driver = new FirefoxDriver(binary,profile); //opted for Firefox driver.
+       // FirefoxBinary binary = new FirefoxBinary(new File("C:\\Users\\Caleb.Carvalho\\AppData\\Local\\Mozilla Firefox\\firefox.exe\\"));
+        //FirefoxProfile profile = new FirefoxProfile();
+        //driver = new FirefoxDriver(binary,profile); //opted for Firefox driver.
 
         driver.get("https://www.etsy.com/");
         System.out.println(driver.getTitle());
