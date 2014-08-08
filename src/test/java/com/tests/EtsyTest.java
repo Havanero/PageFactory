@@ -39,7 +39,7 @@ public class EtsyTest {
 
         EtsyMain mainPage = PageFactory.initElements(driver,EtsyMain.class);
         mainPage.checkPageTitle("Etsy - Your place to buy and sell all things handmade, vintage, and supplies");
-        mainPage.setSearchText("collar");
+        mainPage.setSearchText("tennis balls");
 
         EtsySearch search = PageFactory.initElements(driver,EtsySearch.class);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

@@ -1,5 +1,6 @@
 package com.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -13,24 +14,21 @@ public class EtsySearch {
     private WebDriver driver;
 
 
-    @FindBy(xpath = "//*[@id='search-bar']/div/button")
+    @CacheLookup
+    @FindBy(xpath = "//button[@type='submit']")
     private WebElement searchButton;
 
-    @FindBy(xpath = "//*[@id=\"search-header\"]/h1/span")
-    private WebElement res;
-
+    //search_submit
 
     public EtsySearch(WebDriver driver){
         this.driver=driver;
     }
 
-    public EtsySearchResults searchResults(){
+    public EtsySearchResults searchResults() {
 
         searchButton.submit();
 
-        System.out.print(res.isDisplayed());
-
       return new EtsySearchResults(driver);
-
     }
+
 }
