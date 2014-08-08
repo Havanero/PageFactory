@@ -40,7 +40,7 @@ public void TestMe() {
 
     }
 
-    @Test
+   // @Test
     public void BBCHome() {
 
         logger.setLevel (Level.OFF);
@@ -68,7 +68,7 @@ public void TestMe() {
 
     }
 
-    @Test
+   // @Test
     public void Guardian() {
 
         logger.setLevel (Level.OFF);
@@ -77,7 +77,7 @@ public void TestMe() {
 
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
-        driver.get("https://www.etsy.com/");
+        driver.get("http://www.theguardian.com/uk");
         System.out.println(driver.getTitle());
 
         // Create a new instance of the search page class
